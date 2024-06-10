@@ -9,7 +9,7 @@ rpc_url = os.getenv('RPC_URL')
 gas_price_contract= os.getenv('GAS_PRICE_ORACLE')
 web3 = Web3(Web3.HTTPProvider(rpc_url))
 
-with open('gas_price_oracle_abi.json', 'r') as abi_file:
+with open('../abis/gas_price_oracle_abi.json', 'r') as abi_file:
     gas_oracle_abi = json.load(abi_file)
 
 gas_oracle_address = web3.to_checksum_address(gas_price_contract)
